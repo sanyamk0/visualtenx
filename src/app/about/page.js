@@ -10,10 +10,10 @@ const About = () => {
       </div>
       <div className="ml-36 mr-36 text-left p-5">
         <div className="grid grid-cols-2">
-          <div className="grid-span-1">
+          <div className="col-span-1">
             <Image src="/about.png" alt="about" width={500} height={500} />
           </div>
-          <div className="grid-span-1">
+          <div className="col-span-1">
             <p className="m-4 tracking-wide leading-6">
               <span className="font-bold"> Visual Tenx Technologies</span> was
               founded in 2022 with the intention of offering top-notch web
