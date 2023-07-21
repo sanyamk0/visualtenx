@@ -1,7 +1,31 @@
-import React from "react";
+import ContactCard from "../components/ContactCard";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
-  return <div></div>;
+  return (
+    <>
+      <div className="p-5 flex flex-col">
+        <h1 className="text-center text-4xl font-bold mb-10">Contact Us</h1>
+        <ContactCard />
+      </div>
+      <div className="ml-14 mr-14">
+        <div className="grid grid-cols-2 place-items-center">
+          <ContactForm />
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27729.465001716195!2d76.994659!3d29.68547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e71abd9e34871%3A0x76709f01ae5367ca!2sVisual10X%20%7C%7C%20Graphic%20Designing%20and%20Web%20Development%20Agency%20in%20Karnal!5e0!3m2!1sen!2sin!4v1689942625656!5m2!1sen!2sin"
+              width={560}
+              height={430}
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Contact;
