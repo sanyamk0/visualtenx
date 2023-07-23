@@ -45,68 +45,73 @@ const ContactForm = () => {
   };
   return (
     <>
-      <form className="p-2 text-center w-[35rem]" onSubmit={handleSubmit}>
+      <form className="p-5" onSubmit={handleSubmit}>
         <div className="text-center">
           <p className="text-xl mb-2">You may also write to us.</p>
           <h1 className="text-4xl font-bold mb-8">Send Us a Message</h1>
         </div>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Name"
-          className="p-2 bg-blue-300 rounded-lg block w-full mb-3 focus:outline-none"
-          value={user.username}
-          onChange={handleChange}
-          autoComplete="off"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          className="p-2 bg-blue-300 rounded-lg block w-full mb-3 focus:outline-none"
-          value={user.email}
-          onChange={handleChange}
-          autoComplete="off"
-          required
-        />
-        <input
-          type="number"
-          name="phone"
-          id="phone"
-          placeholder="Mobile"
-          className="p-2 bg-blue-300 rounded-lg block w-full mb-3 focus:outline-none"
-          value={user.phone}
-          onChange={handleChange}
-          autoComplete="off"
-          required
-        />
-        <textarea
-          name="message"
-          id="message"
-          rows={3}
-          placeholder="Message"
-          className="p-2 bg-blue-300 rounded-lg block w-full mb-3 focus:outline-none"
-          value={user.message}
-          onChange={handleChange}
-          autoComplete="off"
-          required
-        />
         <div>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Name"
+            className="w-full rounded-lg bg-blue-300 mb-2 p-2 focus:outline-none"
+            value={user.username}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            className="w-full rounded-lg bg-blue-300 mb-2 p-2 focus:outline-none"
+            value={user.email}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Mobile"
+            className="w-full rounded-lg bg-blue-300 mb-2 p-2 focus:outline-none"
+            value={user.phone}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div>
+          <textarea
+            name="message"
+            id="message"
+            rows={4}
+            placeholder="Message"
+            className="w-full rounded-lg bg-blue-300 mb-2 p-2 focus:outline-none"
+            value={user.message}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div className="cursor-pointer">
           {status === "success" && (
             <p className="text-[#a8e48a]">Thank You for your message!</p>
           )}
           {status === "error" && (
-            <p className="text-[red]">
+            <p className="text-red-500 mb-2">
               There was a error submitting your message. Please Try Again.
             </p>
           )}
-          <button
-            type="submit"
-            className="cursor-pointer p-2 bg-blue-300 rounded-lg block w-full"
-          >
+          <button type="submit" className="w-full rounded-lg bg-blue-300 p-2">
             Send
           </button>
         </div>

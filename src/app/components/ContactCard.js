@@ -26,7 +26,7 @@ const cards = [
 const ContactCard = () => {
   return (
     <div className="p-5">
-      <div className="grid grid-cols-3 gap-16">
+      <div className="lg:grid lg:grid-cols-3 gap-16 flex flex-col">
         {cards.map((card, id) => {
           return (
             <div className="p-5 text-center bg-blue-300" key={id}>
